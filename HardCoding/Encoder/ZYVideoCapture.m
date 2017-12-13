@@ -53,6 +53,7 @@
 {
     [self.session stopRunning];
     [self.previewLayer removeFromSuperlayer];
+    [self.encoder endEncoder];
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate

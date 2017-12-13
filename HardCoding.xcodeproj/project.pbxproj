@@ -15,6 +15,8 @@
 		09DBA70B1FE11CD800546C29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DBA70A1FE11CD800546C29 /* main.m */; };
 		09DBA7151FE11CD800546C29 /* HardCodingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DBA7141FE11CD800546C29 /* HardCodingTests.m */; };
 		09DBA7201FE11CD800546C29 /* HardCodingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DBA71F1FE11CD800546C29 /* HardCodingUITests.m */; };
+		09DBA7321FE11D2F00546C29 /* ZYVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DBA72E1FE11D2F00546C29 /* ZYVideoEncoder.m */; };
+		09DBA7331FE11D2F00546C29 /* ZYVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DBA7311FE11D2F00546C29 /* ZYVideoCapture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		09DBA71B1FE11CD800546C29 /* HardCodingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardCodingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DBA71F1FE11CD800546C29 /* HardCodingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HardCodingUITests.m; sourceTree = "<group>"; };
 		09DBA7211FE11CD800546C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09DBA72E1FE11D2F00546C29 /* ZYVideoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYVideoEncoder.m; sourceTree = "<group>"; };
+		09DBA72F1FE11D2F00546C29 /* ZYVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYVideoCapture.h; sourceTree = "<group>"; };
+		09DBA7301FE11D2F00546C29 /* ZYVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYVideoEncoder.h; sourceTree = "<group>"; };
+		09DBA7311FE11D2F00546C29 /* ZYVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYVideoCapture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		09DBA6FA1FE11CD700546C29 /* HardCoding */ = {
 			isa = PBXGroup;
 			children = (
+				09DBA72D1FE11D2F00546C29 /* Encoder */,
 				09DBA6FB1FE11CD700546C29 /* AppDelegate.h */,
 				09DBA6FC1FE11CD700546C29 /* AppDelegate.m */,
 				09DBA6FE1FE11CD700546C29 /* ViewController.h */,
@@ -130,6 +137,17 @@
 				09DBA7211FE11CD800546C29 /* Info.plist */,
 			);
 			path = HardCodingUITests;
+			sourceTree = "<group>";
+		};
+		09DBA72D1FE11D2F00546C29 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				09DBA7301FE11D2F00546C29 /* ZYVideoEncoder.h */,
+				09DBA72E1FE11D2F00546C29 /* ZYVideoEncoder.m */,
+				09DBA72F1FE11D2F00546C29 /* ZYVideoCapture.h */,
+				09DBA7311FE11D2F00546C29 /* ZYVideoCapture.m */,
+			);
+			path = Encoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DBA7001FE11CD700546C29 /* ViewController.m in Sources */,
+				09DBA7321FE11D2F00546C29 /* ZYVideoEncoder.m in Sources */,
 				09DBA70B1FE11CD800546C29 /* main.m in Sources */,
+				09DBA7331FE11D2F00546C29 /* ZYVideoCapture.m in Sources */,
 				09DBA6FD1FE11CD700546C29 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
