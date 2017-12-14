@@ -68,6 +68,7 @@
     // 创建CompressionSession对象,该对象用于对画面进行编码
     // kCMVideoCodecType_H264 : 表示使用h.264进行编码
     // finishCompressH264Callback : 当一次编码结束会在该函数进行回调,可以在该函数中将数据,写入文件中
+    //传入的self，就是finishCompressH264Callback回调函数里面的outputCallbackRefCon，通过bridge就可以取出此self
     VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, finishCompressH264Callback, (__bridge void * _Nullable)(self), &_compressionSession);
     
     //设置实时编码，直播必然是实时输出
@@ -86,6 +87,8 @@
     VTSessionSetProperty(self.compressionSession, kVTCompressionPropertyKey_DataRateLimits, (__bridge CFArrayRef)limit);
     
     //设置关键帧间隔（也就是GOP间隔）
+    //这里设置与上面的fps一致，意味着每间隔30帧开始一个新的GOF序列，也就是每隔间隔1s生成新的GOF序列
+    //因为上面设置的是，一秒30帧
     int frameInterval = 30;
     CFNumberRef intervalRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &frameInterval);
     VTSessionSetProperty(_compressionSession, kVTCompressionPropertyKey_MaxKeyFrameInterval, intervalRef);
